@@ -5,10 +5,10 @@
    ============================================ */
 :root {
   /* Color Palette for Light Theme */
-  --color-primary: #00796B;      /* Vibrant teal accent */
-  --color-secondary: #80CBC4;    /* Soft pastel teal (hover accents) */
-  --color-background: #f7f6f1;   /* off-white background */
-  --color-text: #008B8B;         /*  cyan text */
+  --color-primary: #0A1F44;      /* Dark navy */
+  --color-secondary: #1E3A8A;    /* Lighter navy accent for hover */
+  --color-background: #FFFFFF;   /* White background */
+  --color-text: #0A1F44;         /* Dark navy text */
 
   /* Font Family */
   --font-base: 'ClashDisplay-Medium', sans-serif;
@@ -59,7 +59,7 @@ body {
     max-width: 600px;
     margin: 2rem auto;
     padding: var(--padding-large);
-    background-color: #f7f6f1;   /* off-white background */
+    background-color: var(--color-background);   /* white background */
     border-radius: 8px;
   }
   
@@ -81,7 +81,7 @@ body {
     font-size: 1rem;
     font-family: var(--font-base);
     color: var(--color-text);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #FFFFFF;
     border: 1px solid var(--color-primary);
     border-radius: 4px;
     transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
@@ -90,7 +90,7 @@ body {
   .form-group input:focus,
   .form-group textarea:focus {
     border-color: var(--color-secondary);
-    box-shadow: 0 0 8px rgba(11, 111, 98, 0.5); /* cyan glow */
+    box-shadow: 0 0 8px rgba(30, 58, 138, 0.5); /* navy glow */
     outline: none;
   }
   
@@ -104,7 +104,7 @@ body {
     padding: 1rem;
     font-size: 1.1rem;
     font-weight: bold;
-    color: #f7f6f1;   /* off-white  button text */
+    color: var(--color-background);   /* white button text */
     background-color: var(--color-primary);
     border: none;
     border-radius: 4px;
@@ -122,12 +122,11 @@ body {
 header {
   background-color: var(--color-background);
   padding: var(--padding-base) 2rem;
-  color: #B5C34B;
+  color: var(--color-primary);
 }
 
 .nav-list {
   /* Retain background if desired or remove for a transparent nav */
-  background-color: #B5C34B;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -138,7 +137,7 @@ header {
 }
 
 .nav-list a {
-  color: var(--color-background);
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 1px;
@@ -146,7 +145,7 @@ header {
 }
 
 .nav-list a:hover {
-  color: var(--color-primary);
+  color: #000C28;
 }
 
 /* ============================================
@@ -176,11 +175,14 @@ h1 a, p a {
 
 /* Artist Image */
 .artist-image {
-  max-width: 300px;
-  width: 60%;
-  height: auto;
-  border-radius: 0%;
+  width: 100%;
+  max-width: 400px;
+  height: 600px; /* fixed height for rectangular crop */
+  object-fit: cover; /* ensures the image fills the box without distortion */
+  border-radius: 4px;
   margin-bottom: 0;
+  margin-right: 1rem;
+  overflow: hidden;
 }
 
 /* Hero Buttons Container */
@@ -235,7 +237,7 @@ section h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: #B5C34B;
+  color: var(--color-primary);
 }
 
 /* ============================================
@@ -293,7 +295,7 @@ section h2 {
    ============================================ */
 footer {
   background-color: var(--color-background);
-  color: #B5C34B; /*var(--color-text)*/;
+  color: var(--color-primary);
   text-align: center;
   padding: var(--padding-base) 0;
   margin-top: 2rem;
