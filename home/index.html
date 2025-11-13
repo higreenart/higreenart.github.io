@@ -40,6 +40,41 @@ header, main, footer {
     text-decoration: underline;
     color: inherit;
   }
+
+  /* Home page specific navigation color */
+  .nav-list a {
+    color: #FFFFFF;
+  }
+
+  .nav-list a:hover {
+    color: #DDDDDD;
+  }
+
+  /* Home page specific header color */
+  header h1 a {
+    color: #FFFFFF;
+  }
+
+  header h1 a:hover {
+    color: #DDDDDD;
+  }
+
+  .intro-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .artist-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .biography {
+    flex: 1;
+  }
   </style>
 </head>
 <body>
@@ -49,7 +84,7 @@ header, main, footer {
       <nav aria-label="Primary Navigation">
         <ul class="nav-list">
           <li><a href="/works/">Works</a></li>
-          <li><a href="/prints/">Prints</a></li>
+          <li><a href="/contact/">Contact</a></li>
           <li><a href="/cv/">CV</a></li>
         </ul>
       </nav>
@@ -57,29 +92,26 @@ header, main, footer {
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <!-- Artist Image -->
-      <img 
-        src="/images/DSC06238.jpeg" 
-        alt="Portrait of HI GREEN, contemporary artist" 
-        class="artist-image" 
-      />
-      <!-- Optionally, you might include a brief welcome message or tagline here -->
-    </section>
-    
-    <!-- Biography Section -->
-    <section class="biography" aria-labelledby="bio-heading">
-      <h2 id="bio-heading"></h2>
-      <p style="color: #f7f6f1;">
-       H. I. Green (b. 1999) is a multidisciplinary artist from Madison, Mississippi. They obtained a bachelor of arts at Millsaps Collage in 2017 and have recently completed Mount Royal school of Art Multidisciplinary Program and the Maryland Institute College of the Arts (MICA) in Baltimore, MD, earning their MFA.
-
-Having started as a painter, using mostly acrylic paint and oil pastels, Green has expanded their practice through a multitude of medioms including printmaking, bookmaking, fiber, wood, and sculptural forms. Throughout their time in grad school Green explored themes of familial origins, displaced longing, and systematically aroused confusion, and the antics of being raised in the black religious south.
-      </p>
+    <section class="intro-section">
+      <div class="intro-content">
+        <img 
+          src="/images/DSC06238.jpeg" 
+          alt="Portrait of HI GREEN, contemporary artist" 
+          class="artist-image" 
+        />
+        <div class="biography" aria-labelledby="bio-heading">
+          <h2 id="bio-heading"></h2>
+          <p style="color: #f7f6f1;">
+            H. I. Green (b. 1999) is a multidisciplinary artist from Madison, Mississippi. They obtained a bachelor of arts at Millsaps Collage in 2017 and have recently completed Mount Royal school of Art Multidisciplinary Program and the Maryland Institute College of the Arts (MICA) in Baltimore, MD, earning their MFA.
+            <br><br>
+            Having started as a painter, using mostly acrylic paint and oil pastels, Green has expanded their practice through a multitude of medioms including printmaking, bookmaking, fiber, wood, and sculptural forms. Throughout their time in grad school Green explored themes of familial origins, displaced longing, and systematically aroused confusion, and the antics of being raised in the black religious south.
+          </p>
+        </div>
+      </div>
     </section>
     
     <!-- Exhibitions Section -->
-    <section class="exhibitions" aria-labelledby="exhibitions-heading">
+    <!-- <section class="exhibitions" aria-labelledby="exhibitions-heading">
       <h2 id="exhibitions-heading" style="color: #B5C34B;">Exhibitions</h2>
       <ul style="color: #f7f6f1;">
         <li>
@@ -110,7 +142,7 @@ Having started as a painter, using mostly acrylic paint and oil pastels, Green h
           <strong>2018:</strong> <em>Millsaps College Lewis Art Gallery Juried Student Exhibition</em> – October 15th - November 7th
         </li>
       </ul>
-    </section>
+    </section> -->
   </main>
 
   <footer>
