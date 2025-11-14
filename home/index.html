@@ -75,6 +75,58 @@ header, main, footer {
   .biography {
     flex: 1;
   }
+
+  @media (max-width: 768px) {
+    body {
+      background-attachment: scroll;
+      background-position: top center;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0;
+      margin: 0.5rem 0 0;
+    }
+
+    .intro-section {
+      padding: 1.5rem 1rem;
+    }
+
+    .intro-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .artist-image {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .biography {
+      width: 100%;
+    }
+
+    .biography p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
   </style>
 </head>
 <body>
