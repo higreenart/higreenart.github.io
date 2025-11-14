@@ -13,9 +13,9 @@
   <style>
     .responsive-video {
       width: 100%;
-      height: auto;
       max-width: 100%;
       display: block;
+      border: 0;
     }
     .panel .gallery {
       overflow: hidden;
@@ -43,13 +43,17 @@
       </button>
       <div class="panel" id="film-panel" role="region" aria-labelledby="film-button">
         <div class="gallery">
-         <div class="work-item">
-            <video class="responsive-video" controls>
-              <source src="/images/Cyanfprojecthgreen.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+          <div class="work-item">
+            <iframe
+              class="responsive-video"
+              src="https://drive.google.com/file/d/1yU8ADGxWAijIHgb_sqE156Sn8Yca0fgq/preview"
+              width="100%"
+              height="480"
+              allow="autoplay"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
           </div>
-          
           <!-- Add more video as needed --> 
         </div>
       </div>
