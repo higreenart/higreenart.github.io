@@ -9,6 +9,7 @@
   --color-secondary: #1E3A8A;    /* Lighter navy accent for hover */
   --color-background: #FFFFFF;   /* White background */
   --color-text: #0A1F44;         /* Dark navy text */
+  --color-footer: #FFFFFF;
 
   /* Font Family */
   --font-base: 'ClashDisplay-Medium', sans-serif;
@@ -295,7 +296,7 @@ section h2 {
    ============================================ */
 footer {
   background-color: var(--color-background);
-  color: var(--color-primary);
+  color: var(--color-footer);
   text-align: center;
   padding: var(--padding-base) 0;
   margin-top: 2rem;
